@@ -1,0 +1,219 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Raleway:wght@500&family=Nunito:wght@700&display=swap');
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    background: linear-gradient(135deg, #dbeafe, #ede9fe);
+    padding: 30px;
+    font-family: 'Arial', sans-serif;
+    color: #2c2c2c;
+}
+
+/* Header */
+header {
+    text-align: center;
+    background: linear-gradient(120deg, #4f46e5, #7c3aed);
+    color: white;
+    padding: 30px 20px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    animation: slideInDown 1s ease-out;
+}
+
+header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.8em;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+/* Main Container */
+.container {
+    display: grid;
+    gap: 25px;
+}
+
+/* Category Section */
+.category {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Category Heading */
+.category h2 {
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #4f46e5;
+}
+
+/* Hover Animation */
+.category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.category::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, #4f46e5, #7c3aed);
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+}
+
+.category:hover::before {
+    transform: translateY(0);
+}
+
+/* Cards Grid */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* Card */
+.card {
+    background: #f8f9ff;
+    border: 1px solid #e0e7ff;
+    padding: 20px;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 0.7s ease forwards;
+    opacity: 0;
+}
+
+.card:nth-child(1) { animation-delay: 0.2s; }
+.card:nth-child(2) { animation-delay: 0.4s; }
+.card:nth-child(3) { animation-delay: 0.6s; }
+
+/* Card Title */
+.card h3 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.3em;
+    margin-bottom: 8px;
+    color: #7c3aed;
+}
+
+.card p {
+    font-size: 0.95em;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+/* Hover Effects */
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Shine Animation on Hover */
+.card::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotate(45deg);
+    transition: transform 0.5s ease;
+    z-index: 0;
+}
+
+.card:hover::before {
+    transform: translate(100%, 100%);
+}
+
+.card h3, .card p, .btn {
+    position: relative;
+    z-index: 1;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    background: #4f46e5;
+    color: white;
+    padding: 10px 16px;
+    font-size: 0.9em;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background: #7c3aed;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* Keyframe Animations */
+@keyframes slideInDown {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}

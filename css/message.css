@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #111b21;
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.chat-header {
+    background-color: #202c33;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.header-icons img {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.chat-box {
+    flex: 1;
+    background-color: #0b141a;
+    padding: 15px;
+    overflow-y: auto;
+    color: white;
+}
+
+.encryption-banner {
+    text-align: center;
+    font-size: 12px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 5px;
+    border-radius: 5px;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.day-divider {
+    text-align: center;
+    font-size: 12px;
+    background-color: #3c454c;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.chat-input {
+    display: flex;
+    align-items: center;
+    background-color: #202c33;
+    padding: 10px;
+}
+
+.input-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background-color: #2a3942;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+
+input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: white;
+    outline: none;
+}
+
+.emoji-button, .mic-button {
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.sent-message {
+    align-self: flex-end;
+    background-color: #005c4b;
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin: 5px 0;
+    color: white;
+    max-width: 60%;
+}

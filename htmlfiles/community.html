@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Page</title>
+    <link rel="stylesheet" href="/css/community.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Left Sidebar - Contact List -->
+    <div class="sidebar">
+        <div class="search-bar">
+            <input type="search" id="searchInput" placeholder="Search for the person..." oninput="filterMessages()" autocomplete="off">
+            <button onclick="filterMessages()">Search</button>
+        </div>
+
+        <section class="messages">
+            <div class="message" data-file="/htmlfiles/message1.html" onclick="openChat(this)">
+                <img src="/logos & img/boy.png" alt="Raju" class="profile-icon">
+                <div class="text">
+                    <h2>Raju</h2>
+                    <p>Can we work on a project together</p>
+                </div>
+            </div>
+
+            <div class="message" data-file="/htmlfiles/message2.html" onclick="openChat(this)">
+                <img src="/logos & img/boy.png" alt="Jairam" class="profile-icon">
+                <div class="text">
+                    <h2>Jairam</h2>
+                    <p>Hii.. I would like to contribute to your project</p>
+                </div>
+            </div>
+
+            <div class="message" data-file="/htmlfiles/message3.html" onclick="openChat(this)">
+                <img src="/logos & img/team.png" alt="PeerPlacers" class="profile-icon">
+                <div class="text">
+                    <h2>PeerPlacers</h2>
+                    <p>MOHIT, Here I got stuck in the problem</p>
+                </div>
+            </div>
+
+            <div class="message" data-file="/htmlfiles/message4.html" onclick="openChat(this)">
+                <img src="/logos & img/girl.png" alt="Sakshi Gupta" class="profile-icon">
+                <div class="text">
+                    <h2>Sakshi Gupta</h2>
+                    <p>Hii.. Can I be your peer?</p>
+                </div>
+            </div>
+
+            <div class="message" data-file="/htmlfiles/message5.html" onclick="openChat(this)">
+                <img src="/logos & img/boy.png" alt="Siddhant Singh" class="profile-icon">
+                <div class="text">
+                    <h2>Siddhant Singh</h2>
+                    <p>My pleasure to work with you.</p>
+                </div>
+            </div>
+
+            <div class="message" data-file="/htmlfiles/message6.html" onclick="openChat(this)">
+                <img src="/logos & img/girl.png" alt="Tanu Singh" class="profile-icon">
+                <div class="text">
+                    <h2>Tanu Singh</h2>
+                    <p>Hii.. Thanks for joining my community</p>
+                </div>
+            </div>
+
+            <div class="message" data-file="/htmlfiles/message7.html" onclick="openChat(this)">
+                <img src="/logos & img/coder.png" alt="Coder's Cafe" class="profile-icon">
+                <div class="text">
+                    <h2>Coder's Cafe</h2>
+                    <p>You can share your doubts here</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Right Chat Window - Loads selected chat -->
+    <div class="chat-window">
+        <p class="placeholder-text">Heyy welcome!</p>
+        <iframe id="chatFrame" src="" frameborder="0"></iframe>
+    </div>
+
+</div>
+
+<script src="/js/COMMUNITY.JS"></script>
+
+</body>
+</html>

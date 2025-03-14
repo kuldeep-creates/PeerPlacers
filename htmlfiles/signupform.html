@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Sign Up - Peer Placers</title>
+    <link rel="stylesheet" href="/css/signupform.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Sign Up Form Section -->
+    <section class="signup-section">
+        <div class="signup-container">
+            <h1>Student Sign Up</h1>
+            <form class="signup-form" id="studentSignupForm">
+                
+                <div class="form-group">
+                    <input type="text" id="studentFullName" name="fullName" placeholder="Full Name" autocomplete="OFF" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="email" id="studentEmail" name="email" placeholder="Email Address" autocomplete="OFF" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="tel" id="studentPhone" name="phone" placeholder="Phone Number" autocomplete="OFF" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" id="studentCourse" name="course" placeholder="Course (e.g., B.Tech, BCA)" autocomplete="OFF" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" id="studentCollege" name="college" placeholder="College Name" autocomplete="OFF" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" id="collegeAddress" name="collegeAddress" placeholder="College Address" autocomplete="OFF" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" id="pinCode" name="pinCode" placeholder="Pin Code" autocomplete="OFF" required>
+                </div>
+
+                <div class="form-group">
+                    <select id="studentYear" name="year" required>
+                        <option value="" disabled selected>Year of Study</option>
+                        <option value="1">1st Year</option>
+                        <option value="2">2nd Year</option>
+                        <option value="3">3rd Year</option>
+                        <option value="4">4th Year</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" id="abcID" name="abcID" placeholder="ABC ID" autocomplete="OFF" required>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-group">
+                    <a href="/htmlfiles/index.html"><button type="submit" class="cta-button">Sign Up</button></a>
+                </div>
+
+                <!-- Success/Error Message -->
+                <div id="studentMessage" class="message"></div>
+            </form>
+        </div>
+    </section>
+    <script src="/js/signupform.js"></script>
+
+</body>
+
+</html>
